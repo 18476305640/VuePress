@@ -14,14 +14,15 @@ module.exports = {
 	lastUpdated: "更新时间",
     logo: '/assets/img/logo.png',
 	nav: [
-      { text: 'Js', link: '/note/大前端/Javascrit/Javascrit.html' },
-      { text: 'spring', link: '/note/ssm/Spring/Spring.md' },
-      { text: 'K8S', link: 'https://google.com' },
+      // { text: 'Js', link: '/note/大前端/Javascrit/Javascrit.html' },
+      { text: '笔记总览', link: '/note/程序员的自身修养.html' },
+      // { text: 'K8S', link: 'https://google.com' },
     ],
 	sidebar: 'auto'
 	
   },
   plugins: [
+	
     [
       '@vuepress/last-updated',
       {
@@ -31,6 +32,17 @@ module.exports = {
           moment.locale('zh-cn')
           return moment(timestamp).format("LLLL")
         }
+      }
+	  
+    ],
+
+	'@vuepress/back-to-top',
+	'@vuepress/medium-zoom',
+	// 谷歌分析 
+	[
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-252871073-1' // UA-00000000-0
       }
     ]
   ]
