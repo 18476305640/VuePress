@@ -1,2 +1,1 @@
-# VuePress
-VuePress
+### VuePress
